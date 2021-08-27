@@ -1,0 +1,243 @@
+/* Common css-code to all */
+.css-code {
+    margin: 0px 0 30px 150px;
+    padding: 20px;
+    display: inline-block;
+    background: black;
+    color: white;
+    border: 3px solid yellow;
+}
+
+.dashed{
+    border: 2px solid black ;
+    display: block;
+    background-color: black;
+}
+
+
+/* Start transform */
+
+/*  
+ transform: translate() ,scale() , rotate(),skew()
+ 
+ translate() ->moves elements in vertical or horizontal directions
+    --translate(tx,ty);
+    --translate(tx); 
+    --translateX(tx);
+    --translateY(ty);
+    tx-> the length of the translation to x axis = length or percentage values
+    ty-> the length of the translation to x axis = length or percentage values
+    
+*/
+
+
+
+.wrapper-translate {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed red;
+    margin: 0 auto; /* for centring the box */
+
+
+}
+
+.inner-translate {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    /* translate in x-axis */
+    /* transform: translate(-50%); */
+   
+    /* translate in y-axis */
+    /* transform: translate(0,50%); */
+    /* transform: translateY(50px); */
+   
+    /* translate in both axis */
+     transform: translate(50px,50px); 
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+    scale -> resize elements in 2D space
+    transform: scale() ->syntax
+      --scale(sx,sy);
+      --scale(sx);
+      --scaleX(sx);
+      --scaleY(sy);
+    sx -> the amount of resize of the element in horizontal direrction - numbers(int ,zero, decimals)  
+    sy -> the amount of resize of the element in vertical direrction - numbers(int ,zero, decimals)  
+    sx,xy = [0,1] -> decreasing the size
+    sx,sy > 1 ->increasing the size
+
+ */
+.wrapper-scale {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed red;
+    margin: 0 auto; /* for centring the box */
+
+
+}
+
+.inner-scale {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    /* scaling along both axis  */
+    /* transform: scale(2,2); */
+    /* transform: scale(1.5); */
+    
+    /* scaling along x-axis */
+    /* transform: scaleX(.5); */
+
+    /* scaling along y-axis */
+    transform: scaleY(0.5);
+
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+rotate
+rotate -> rotates elements in 2d space
+transform: rotate(a);
+a = angle
+   -> positive = clockwise rotation 
+   -> negative = counter-clockwise rotation
+a = 360 degrees = 1 full rotation -> 360deg
+a = 400 gradians = 1 full rotation -> 400grad
+a = 2*pi radians = 2*3.24 = 6.28 radians = 1 full rotation -> 6.28rad
+a = 1 turn = 1 full rotations -> 1turn
+                   
+ */
+ .wrapper-rotate {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed red;
+    margin: 0 auto; /* for centring the box */
+
+
+}
+
+.inner-rotate {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    /* degrees */
+    /* transform: rotate(-20deg); */
+
+    /* gradians */
+    /* transform: rotate(-10grad); */
+
+    /* radians */
+    /* (360deg / 6.28) * 1rad = 57deg */
+    /* transform: rotate(1rad); */
+
+    /* turns */
+    transform: rotate(0.3turn);
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+skew -> tilting elements in 2D space
+transform: skew(); ->syntax
+  skew(ax,ay);
+  skew(ax);
+  skewX(ax);
+  skewY(ay);
+  ax -> the amount of the anngle to use to distort the element in horizontal direction
+  ay -> the amount of the anngle to use to distort the element in vertical direction
+  ax,ay -> degree,gradian,radian and turn
+
+ */
+ .wrapper-skew {
+    width: 200px;
+    height: 200px;
+    border: 1px dashed red;
+    margin: 0 auto; /* for centring the box */
+
+
+}
+
+.inner-skew {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    /* skew in x-axis */
+    /* transform: skew(-20deg); */
+    /* transform: skewX(10deg); */
+
+    /* skew in y-axis */
+    /* transform: skewY(-10deg); */
+
+    /* skew in both axis */
+    transform: skew(10deg,20deg);
+    }
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+elements -> block level and inline level
+transformables -> block levels
+non-transformables -> inline levels
+
+ */
+.wrapper-transformable {
+    width: 300px;
+    height: 200px;
+    border: 1px dashed red;
+    margin: 0 auto; /* for centring the box */
+}
+
+.inline {
+    display: inline-block;
+    transform: rotate(20deg);
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/*
+moving the origin of the element</h3>
+transform-origin -> changing the transform origin
+transform-origin: center center | 50% 50% | 10px 20px;
+transform-origin: xAxis yAxis;
+xAxis : left, right, top, bottom, center, percentage, lengths
+yAxis : left, right, top, bottom, center, percentage, lengths
+            
+ */
+
+.wrapper-origin-move {
+    width: 300px;
+    height: 200px;
+    border: 1px dashed red;
+    margin: 0 auto; /* for centring the box */
+}
+
+.inner-origin-move {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    transform-origin: center bottom;
+    transform: rotate(40deg);
+    }
+
+/* End tramsform */

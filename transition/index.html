@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <!-- link css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Transitions</h1>
+
+    <!-- Controling our transitions start here -->
+
+    <h2>Controling Our Transitions</h2>
+
+    <pre>
+        transition-property: property name
+        transition-duration: duration
+        transsition-timming-finction: timming function
+        transition-delay: delay
+
+        transition: [property][duration][timming function][delay];
+    </pre>
+
+    <div>
+        <h3>HTML Code--</h3>
+        <pre class="code">
+            &ltdiv class="transition-div"></div>
+        </pre>
+        <h3>CSS Code--</h3>
+        <pre class="code">
+            .transition-div {
+                margin: 0 auto;
+                width: 300px;
+                height: 100px;
+                background-color: red;
+                transition: background-color 1s;
+            }
+            
+            .transition-div:hover {
+                background-color: blue;
+            }
+        </pre>
+    </div>
+
+    <div class="transition-div"></div>
+
+    <!-- Controling our transitions end here -->
+
+
+    <br>
+        <br>
+        <br>
+        <br>
+        <h2 class="dashed"></h2>
+<!-- Defining property to apply transition start here -->
+
+        <h2>Defining property to apply transition</h2>
+
+        <pre>
+            transition-property:none | all | property name;
+            none -> no prperty will be transitioned
+            all -> all transitionable properties will be transitioned
+            property name -> the transitioned property name
+        </pre>
+    
+        <div>
+            <h3>HTML Code--</h3>
+            <pre class="code">
+                &ltdiv class="transition-dpta"></div>
+            </pre>
+            <h3>CSS Code--</h3>
+            <pre class="code">
+                .transition-dpta {
+                    margin: 0 auto;
+                   width: 100px;
+                   height: 100px;
+                   background-color: blue;
+                   transition-property: all;
+                   transition-duration: 1s;
+                }
+                .transition-dpta:hover {
+                    width: 200px;
+                    height: 200px;
+                    background-color: chocolate;
+                }
+            </pre>
+        </div>
+    
+        <div class="transition-dpta"></div>
+
+<!-- Defining property to apply transition end here -->
+
+
+<br>
+<br>
+<br>
+<br>
+<h2 class="dashed"></h2>   
+
+
+<!-- Specifying how long the transition will take start here -->
+
+            <h2>Specifying how long the transition will take</h2>
+
+            <pre>
+                transition-duration: time value -> second or millisecond = s | ms
+                e.g = transition-duration: 3s;
+                e.g = transition-duration: 400ms;
+            </pre>
+
+            <div>
+                <h3>HTML Code--</h3>
+                <pre class="code">
+                    &ltdiv class="transition-shlt"></div>
+                </pre>
+                <h3>CSS Code--</h3>
+                <pre class="code">
+                    .transition-shlt {
+                        width: 300px;
+                        height: 300px;
+                        margin: 0 auto;
+                        background-color: red;
+                        transition-property: width, height, background-color;
+                        transition-duration: 2s, 3s, 400ms;
+                    }
+                    .transition-shlt:hover {
+                        width: 200px;
+                        height: 100px;
+                        background-color: blue;
+                    }
+                </pre>
+            </div>
+
+            <div class="transition-shlt"></div>
+
+<!-- Specifying how long the transition will take end here -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h2 class="dashed"></h2>   
+
+
+<!-- Transition timing function Part 1 start here -->
+
+            <h2>Transition timing function Part 1</h2>
+
+            <pre>
+                transition-timing-function: predefined keywords
+                --> ease
+                --> ease-in
+                --> ease-out
+                --> ease-in-out
+                --> linear
+                --> step-start
+                --> step-end
+            </pre>
+
+            <div>
+                <h3>HTML Code--</h3>
+                <pre class="code">
+                    &ltdiv class="container">
+                        &ltdiv class="transition-ttf ease">ease&lt/div>
+                        &ltdiv class="transition-ttf ease-in">ease-in&lt/div>
+                        &ltdiv class="transition-ttf ease-out">ease-out&lt/div>
+                        &ltdiv class="transition-ttf ease-in-out">ease-in-out&lt/div>
+                        &ltdiv class="transition-ttf linear">linear&lt/div>
+                        &ltdiv class="transition-ttf step-start">step-start&lt/div>
+                        &ltdiv class="transition-ttf step-end">step-end&lt/div>
+                    &lt/div>
+                </pre>
+                <h3>CSS Code--</h3>
+                <pre class="code">
+                    .container {
+                        margin-left: 400px;
+                    }
+                   
+                    .transition-ttf {
+                       color: white;
+                       background-color: red;
+                       width: 100px;
+                       padding: 10px;
+                       margin: 10px;
+                       transition-property: margin-left;
+                       transition-duration: 2s;
+                     }
+                     
+                     .ease {
+                       transition-timing-function: ease;
+                     }
+                     
+                     .ease-in {
+                       transition-timing-function: ease-in;
+                     }
+                     
+                     .ease-out {
+                       transition-timing-function: ease-out;
+                     }
+                     
+                     .ease-in-out {
+                       transition-timing-function: ease-in-out;
+                     }
+                     
+                     .linear {
+                       transition-timing-function: linear;
+                     }
+                     
+                     .step-start {
+                       transition-timing-function: step-start;
+                     }
+                     
+                     .step-end {
+                       transition-timing-function: step-end;
+                     }
+                     
+                     .container:hover .transition-ttf {
+                       margin-left: 500px;
+                     }
+                     
+                </pre>
+            </div>
+
+            <div class="container">
+                <div class="transition-ttf ease">ease</div>
+                <div class="transition-ttf ease-in">ease-in</div>
+                <div class="transition-ttf ease-out">ease-out</div>
+                <div class="transition-ttf ease-in-out">ease-in-out</div>
+                <div class="transition-ttf linear">linear</div>
+                <div class="transition-ttf step-start">step-start</div>
+                <div class="transition-ttf step-end">step-end</div>
+
+            </div>
+
+<!-- Transition timing function Part 1 end here -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h2 class="dashed"></h2>   
+
+
+<!-- Transition timing function Part 2 start here -->
+
+            <h2>Transition timing function Part 2</h2>
+
+            <pre>
+                  transition-timing-function: steps(n)
+                  transition-timing-function: steps(n, j)
+                  n -> number of steps
+                  j -> jump keyword -> start || end
+              
+            </pre>
+
+            <div>
+                <h3>HTML Code--</h3>
+                <pre class="code">
+                    &ltdiv class="container">
+                        &ltdiv class="transition-tts2 steps">steps&lt/div>
+                        &ltdiv class="transition-tts2 steps-start">steps-start&lt/div>
+                        &ltdiv class="transition-tts2 steps-end">steps-end&lt/div>
+                    &lt/div>
+                </pre>
+                <h3>CSS Code--</h3>
+                <pre class="code">
+                    .container {
+                        margin-left: 400px;
+                    }
+                    
+                    .transition-tts2 {
+                        color: white;
+                        background-color: red;
+                        width: 100px;
+                        padding: 10px;
+                        margin: 10px;
+                        transition-property: margin-left;
+                        transition-duration: 2s;
+                      }
+                      
+                      .container:hover .transition-tts2 {
+                        margin-left: 500px;
+                      }
+                      
+                      .steps {
+                        transition-timing-function: steps(2);
+                      }
+                      
+                      /*take a step then wait*/
+                      .steps-start {
+                        transition-timing-function: steps(10, start);
+                      }
+                      
+                      /*wait then take a step */
+                      .steps-end {
+                        transition-timing-function: steps(10, end);
+                      }
+                </pre>
+            </div>
+
+            <div class="container">
+                <div class="transition-tts2 steps">steps</div>
+                <div class="transition-tts2 steps-start">steps-start</div>
+                <div class="transition-tts2 steps-end">steps-end</div>
+            </div>
+
+<!-- Transition timing function Part 2 end here -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h2 class="dashed"></h2>   
+
+
+<!-- Transition timing function Part 3 start here -->
+
+            <h2>Transition timing function Part 3</h2>
+
+            <pre>
+                transition-timing-function: cubic-bezier(x1, y1, x2, y2);
+                timing function that describes a progression of movement as a cubic-bezier curve.  
+            </pre>
+
+            <div>
+                <h3>HTML Code--</h3>
+                <pre class="code">
+                    &ltdiv class="container">
+                        &ltdiv class="transition-tts3 cubic">cubic&lt/div>
+                    &lt/div>
+                </pre>
+                <h3>CSS Code--</h3>
+                <pre class="code">
+                    .container {
+                        margin-left: 400px;
+                    }
+                    
+                    .transition-tts3 {
+                        color: white;
+                        background-color: red;
+                        width: 100px;
+                        padding: 10px;
+                        margin: 10px;
+                        transition-property: margin-left;
+                        transition-duration: 2s;
+                      }
+                      
+                      .container:hover .transition-tts3 {
+                        margin-left: 500px;
+                      }
+                      
+                      .cubic {
+                        transition-timing-function: cubic-bezier(0.99, 0.5, 0.44, 0.53);
+                      }
+                      
+                </pre>
+            </div>
+
+            <div class="container">
+                <div class="transition-tts3 cubic">cubic</div>
+            </div>
+
+    <!-- Transition timing function Part 3 end here -->
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h2 class="dashed"></h2>   
+
+
+<!-- Setting timeout before the transition start here -->
+
+            <h2>Setting timeout before the transitio</h2>
+
+            <pre>
+                transition-delay: -> 2s || 1000ms
+                    ->setting timeout before transition
+            </pre>
+
+            <div>
+                <h3>HTML Code--</h3>
+                <pre class="code">
+                    &ltdiv class="container">
+                        &ltdiv class="transition delay1">&lt/div>
+                        &ltdiv class="transition delay2">&lt/div>
+                        &ltdiv class="transition delay3">&lt/div>
+                        &ltdiv class="transition delay4">&lt/div>
+                        &ltdiv class="transition delay5">&lt/div>
+                    &lt/div>
+                </pre>
+                <h3>CSS Code--</h3>
+                <pre class="code">
+                    .transition {
+                        color: white;
+                        background-color: red;
+                        width: 100px;
+                        padding: 10px;
+                        margin: 10px;
+                        transition-property: margin-left;
+                        transition-duration: 2s;
+                      }
+                      
+                      .container:hover .transition {
+                        margin-left: 500px;
+                      }
+                      
+                      .delay1 {
+                        transition-delay: 1s;
+                      }
+                      
+                      .delay2 {
+                        transition-delay: 2s;
+                      }
+                      
+                      .delay3 {
+                        transition-delay: 3s;
+                      }
+                      
+                      .delay4 {
+                        transition-delay: 4s;
+                      }
+                      
+                      .delay5 {
+                        transition-delay: 5s;
+                      }
+                </pre>
+            </div>
+
+            <div class="container">
+                <div class="transition delay1">delay1 time 1s</div>
+                <div class="transition delay2">delay1 time 2s</div>
+                <div class="transition delay3">delay1 time 3s</div>
+                <div class="transition delay4">delay1 time 4s</div>
+                <div class="transition delay5">delay1 time 5s</div>
+            </div>
+
+    <!-- Setting timeout before the transition end here -->
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<h2 class="dashed"></h2>   
+
+
+<!--Bringing all transition properties together start here -->
+
+            <h2>Bringing all transsition properties together </h2>
+
+            <pre>
+                transition-property: property name
+                transition-duration: duration amount in time (seconds or milliseconds)
+                transition-timming-function: predefined keyword or steps function or timming-function
+                transition-delay: timeout amount in time (s or ms)
+            </pre>
+
+            <div>
+                <h3>HTML Code--</h3>
+                <pre class="code">
+                    &ltdiv class="together-container">
+                        &ltdiv class="together">Transition all together&lt/div>
+                    &lt/div>
+                </pre>
+                <h3>CSS Code--</h3>
+                <pre class="code">
+                    .together {
+                        margin-left: 300px;
+                        width: 200px;
+                        height: 50px;
+                        background-color: red;
+                        transition-property: transform;
+                        transition-duration: 1.25s;
+                        transition-timing-function: cubic-bezier(1, 0.34, 1.4);
+                        transition-delay: 0.5s;
+                      }
+                      
+                    .together-container:hover .together {
+                        transform: translate(600px);
+                    }
+                </pre>
+            </div>
+
+            <div class="together-container">
+                <div class="together">Transition all together</div>
+            </div>
+
+    <!-- Bringing all transition properties together end here --> 
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="dashed"></h2> 
+    <!--Transition shorthand property start here -->
+
+            <h2>Transition shorthand property </h2>
+
+            <pre>
+                transition-property: property name
+                transition-duration: duration amount in time (seconds or milliseconds)
+                transition-timming-function: predefined keyword or steps function or timming-function
+                transition-delay: timeout amount in time (s or ms)
+
+
+                transition: property-name duration timming-function delay
+            </pre>
+
+            <div>
+                <h3>HTML Code--</h3>
+                <pre class="code">
+                    &ltdiv class="together-container-shorthand">
+                        &ltdiv class="together-shorthand">Transition all together shorthand&lt/div>
+                    &lt/div>
+                </pre>
+                <h3>CSS Code--</h3>
+                <pre class="code">
+                    .together-shorthand {
+                        margin-left: 300px;
+                        width: 250px;
+                        height: 50px;
+                        background-color: red;
+                        transition: transform 1.25s 1s;
+                      }
+                      
+                    .together-container-shorthand:hover .together-shorthand {
+                        transform: translate(600px);
+                    }
+                </pre>
+            </div>
+
+            <div class="together-container-shorthand">
+                <div class="together-shorthand">Transition all together shorthand</div>
+            </div>
+
+    <!-- Transition shorthand property end here -->   
+
+    <!-- link / attach javascript file -->
+    <script src="javascript.js"></script>
+</body>
+</html>
